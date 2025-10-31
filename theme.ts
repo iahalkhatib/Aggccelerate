@@ -1,21 +1,21 @@
 import { ModuleDefinition } from './types';
-import { GeminiIcon, ClaudeIcon, GrokIcon, ChatGPTIcon, ConductorIcon, ScoreIcon } from './components/Icons';
+import { BrassIcon, StringsIcon, PercussionIcon, WindsIcon, ConductorIcon, ScoreIcon } from './components/Icons';
 
 export const MODULE_DEFINITIONS: { [key: string]: ModuleDefinition } = {
   BRASS: {
     name: 'Brass',
     tagline: 'Hear the boldest voices perform your prompt.',
     systemInstruction: 'You are a bold, brassy, and confident assistant.',
-    color: '#E6C36A', // Gold / Amber
-    icon: GeminiIcon,
+    color: '#5AA9E6', // Blue for Gemini
+    icon: BrassIcon,
     llm: 'Gemini',
   },
   STRINGS: {
     name: 'Strings',
     tagline: 'Polish this until it sings.',
     systemInstruction: 'You are an elegant, smooth, and precise assistant.',
-    color: '#5AA9E6', // Silver / Sky blue
-    icon: ClaudeIcon,
+    color: '#E6C36A', // Gold/Orange for Claude
+    icon: StringsIcon,
     llm: 'Claude',
   },
   PERCUSSION: {
@@ -23,7 +23,7 @@ export const MODULE_DEFINITIONS: { [key: string]: ModuleDefinition } = {
     tagline: 'Drive your workflows forward.',
     systemInstruction: 'You are a structured, rhythmic, and action-oriented assistant.',
     color: '#C44545', // Crimson / Rose
-    icon: GrokIcon,
+    icon: PercussionIcon,
     llm: 'Grok',
   },
   WINDS: {
@@ -31,7 +31,7 @@ export const MODULE_DEFINITIONS: { [key: string]: ModuleDefinition } = {
     tagline: 'Analyze how your ideas perform.',
     systemInstruction: 'You are an analytical, airy, and insightful assistant.',
     color: '#7FFFD4', // Teal / Mint
-    icon: ChatGPTIcon,
+    icon: WindsIcon,
     llm: 'ChatGPT',
   },
   CONDUCTOR: {

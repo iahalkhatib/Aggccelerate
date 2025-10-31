@@ -28,7 +28,7 @@ export const PromptInput: React.FC<PromptInputProps> = ({ onRunAll, isLoading })
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder="Compose your query..."
+        placeholder="Compose your prompt"
         className="w-full h-14 p-4 pr-16 bg-black/30 text-white border border-gray-700 rounded-lg backdrop-blur-sm focus:ring-2 focus:ring-brand-conductor focus:outline-none resize-none transition-all"
         disabled={isLoading}
       />

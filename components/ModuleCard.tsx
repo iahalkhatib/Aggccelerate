@@ -19,13 +19,17 @@ export const ModuleCard: React.FC<ModuleCardProps> = ({ data, prompt, onSelectRe
         ></div>
         
         <div className="relative z-10 flex flex-col h-full">
-            <div className="flex items-start gap-3">
-                <span style={{ color: data.color }}>
-                  <data.icon className="w-7 h-7 mt-1" />
-                </span>
+            <div className="flex items-start">
                 <div>
                   <h3 className="font-cinzel text-xl font-bold text-white leading-tight">{data.name}</h3>
-                  {data.llm && <p className="text-gray-500 text-[10px] font-inter uppercase tracking-wider">{data.llm}</p>}
+                  {data.llm && 
+                    <p 
+                        className="text-[10px] font-inter uppercase tracking-wider font-bold"
+                        style={{ color: data.color }}
+                    >
+                        {data.llm}
+                    </p>
+                  }
                 </div>
             </div>
             <p className="text-gray-400 text-xs mt-2 mb-3 h-8">{data.tagline}</p>

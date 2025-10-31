@@ -31,27 +31,30 @@ export const ScoreIcon = ({ className = '' }: { className?: string }) => (
     </svg>
 );
 
-// Brand-inspired Icons
-export const GeminiIcon = ({ className = '' }: { className?: string }) => (
-    <svg className={className} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2l2.5 7.5H22l-6 4.5 2.5 7.5-6.5-5-6.5 5 2.5-7.5-6-4.5h7.5L12 2z" />
+// New "Tron meets Confetti" Thematic Icons
+export const BrassIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
     </svg>
 );
 
-export const ClaudeIcon = ({ className = '' }: { className?: string }) => (
-    <svg className={className} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-       <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" /><path d="M12 10c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z" />
+export const StringsIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12a8.25 8.25 0 0116.5 0M3.75 17.25h16.5" />
     </svg>
 );
 
-export const GrokIcon = ({ className = '' }: { className?: string }) => (
-    <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-    </svg>
+export const PercussionIcon = ({ className = '' }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="2.25"></circle>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M16.95 7.05a7 7 0 00-9.9 0" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19.071 4.929a10 10 0 00-14.142 0" />
+  </svg>
 );
 
-export const ChatGPTIcon = ({ className = '' }: { className?: string }) => (
-    <svg className={className} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.71,2.53a1,1,0,0,0-1.42,0l-6,6a1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0l6-6a1,1,0,0,0,0-1.42ZM8.45,9.18l3.54-3.53,3.54,3.53-3.54,3.54ZM14.12,14.12l-4.24,4.24a1,1,0,0,0,0,1.42l6,6a1,1,0,0,0,1.42,0l4.24-4.24a1,1,0,0,0,0-1.42Zm-2.83,5.65,3.54-3.53,3.53,3.53-3.53,3.54Z" />
-    </svg>
+export const WindsIcon = ({ className = '' }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M6 12c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M18 12c0 3.314-2.686 6-6 6S6 15.314 6 12H4" />
+  </svg>
 );
