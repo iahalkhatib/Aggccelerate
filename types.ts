@@ -6,6 +6,7 @@ export interface ModuleDefinition {
   systemInstruction: string;
   color: string;
   icon: React.FC<{ className?: string }>;
+  llm?: string;
 }
 
 export interface ModuleCardData extends ModuleDefinition {

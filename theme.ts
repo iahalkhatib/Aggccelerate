@@ -8,6 +8,7 @@ export const MODULE_DEFINITIONS: { [key: string]: ModuleDefinition } = {
     systemInstruction: 'You are a bold, brassy, and confident assistant.',
     color: '#E6C36A', // Gold / Amber
     icon: BrassIcon,
+    llm: 'Gemini',
   },
   STRINGS: {
     name: 'Strings',
@@ -15,6 +16,7 @@ export const MODULE_DEFINITIONS: { [key: string]: ModuleDefinition } = {
     systemInstruction: 'You are an elegant, smooth, and precise assistant.',
     color: '#5AA9E6', // Silver / Sky blue
     icon: StringsIcon,
+    llm: 'Claude',
   },
   PERCUSSION: {
     name: 'Percussion',
@@ -22,6 +24,7 @@ export const MODULE_DEFINITIONS: { [key: string]: ModuleDefinition } = {
     systemInstruction: 'You are a structured, rhythmic, and action-oriented assistant.',
     color: '#C44545', // Crimson / Rose
     icon: PercussionIcon,
+    llm: 'Grok',
   },
   WINDS: {
     name: 'Winds',
@@ -29,6 +32,7 @@ export const MODULE_DEFINITIONS: { [key: string]: ModuleDefinition } = {
     systemInstruction: 'You are an analytical, airy, and insightful assistant.',
     color: '#7FFFD4', // Teal / Mint
     icon: WindsIcon,
+    llm: 'ChatGPT',
   },
   CONDUCTOR: {
     name: 'Conductor',

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MenuIcon } from './Icons';
+import { MenuIcon, TrebleClefIcon } from './Icons';
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,8 +64,12 @@ export const Header: React.FC = () => {
 
       {/* Center Section */}
       <div className="text-center mt-2 sm:-mt-4">
-        <h1 className="font-cinzel text-4xl sm:text-5xl font-bold text-white tracking-widest">
+        <h1 
+          className="font-cinzel text-4xl sm:text-5xl font-bold text-white tracking-widest inline-flex items-center"
+          style={{ textShadow: '0 0 5px rgba(255,255,255,0.4), 0 0 15px rgba(140, 111, 247, 0.4)' }}
+        >
           ORCHESTRA
+          <TrebleClefIcon className="w-12 h-12 ml-1 text-brand-conductor opacity-80" />
         </h1>
         <p className="text-gray-300 mt-2 text-sm sm:text-base">
           Orchestrate Intelligence — Your AI, Conducted to Perfection.
