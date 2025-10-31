@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orchestra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            'brand-brass': '#E6C36A',
+            'brand-strings': '#5AA9E6',
+            'brand-percussion': '#C44545',
+            'brand-winds': '#7FFFD4',
+            'brand-conductor': '#8C6FF7',
+            'brand-score': '#CFCFCF',
+            'brand-bg-start': '#0A0B10',
+            'brand-bg-end': '#1B1333',
+          },
+          animation: {
+            'breathe': 'breathe 4s ease-in-out infinite',
+            'shimmer': 'shimmer 1.5s ease-in-out infinite',
+          },
+          keyframes: {
+            breathe: {
+              '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+              '50%': { opacity: '1', transform: 'scale(1.02)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-1000px 0' },
+              '100%': { backgroundPosition: '1000px 0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background: linear-gradient(180deg, #0A0B10 0%, #1B1333 100%);
+      color: #EAEAEA;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+    "@mui/material": "https://aistudiocdn.com/@mui/material@^7.3.4",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

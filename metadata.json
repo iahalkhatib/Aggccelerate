@@ -1,0 +1,5 @@
+{
+  "name": "Orchestra by aggccelerate.com",
+  "description": "Orchestra is a solution by aggccelerate.com. Its Brass module allows users to enter a prompt and see how multiple AI models respond side-by-side for a direct comparison, refinement, and selection of the best AI response.",
+  "requestFramePermissions": []
+}
