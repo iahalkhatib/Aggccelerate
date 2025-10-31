@@ -49,10 +49,6 @@
       from { background-position: 0 0; }
       to { background-position: -500px 1000px; }
     }
-    @keyframes move-bg-fast {
-      from { background-position: 0 0; }
-      to { background-position: -200px 2000px; }
-    }
 
     body {
       background: linear-gradient(180deg, #0A0B10 0%, #1B1333 100%);
@@ -61,7 +57,7 @@
       overflow-x: hidden;
     }
 
-    body::before, body::after {
+    body::before {
       content: '';
       position: fixed;
       top: 0;
@@ -72,6 +68,7 @@
     }
 
     body::before {
+      /* Stars layer */
       background-image:
         radial-gradient(circle at 10% 20%, rgba(255,255,255,0.5) 1px, transparent 1.1px),
         radial-gradient(circle at 50% 30%, rgba(255,255,255,0.5) 1px, transparent 1.1px),
@@ -84,39 +81,35 @@
       background-size: 500px 500px;
       animation: move-bg-slow 150s linear infinite;
     }
-
-    body::after {
-       background-image:
-        /* Soft colored blobs for atmosphere */
-        radial-gradient(ellipse 50px 80px at 20% 30%, #5AA9E610, transparent 80%),
-        radial-gradient(ellipse 70px 70px at 80% 50%, #E6C36A10, transparent 80%),
-        radial-gradient(ellipse 80px 50px at 50% 80%, #C4454510, transparent 80%),
-        radial-gradient(ellipse 60px 90px at 15% 75%, #7FFFD410, transparent 80%),
-        radial-gradient(ellipse 70px 70px at 90% 25%, #8C6FF710, transparent 80%),
-        /* New confetti particles for a festive feel */
-        radial-gradient(ellipse 3px 2px at 15% 10%, #E6C36A, transparent),
-        radial-gradient(ellipse 2px 3px at 25% 45%, #5AA9E6, transparent),
-        radial-gradient(circle at 35% 85%, #C44545 1px, transparent),
-        radial-gradient(ellipse 3px 2px at 45% 20%, #7FFFD4, transparent),
-        radial-gradient(circle at 55% 60%, #8C6FF7 2px, transparent),
-        radial-gradient(circle at 65% 5%, #E6C36A 1px, transparent),
-        radial-gradient(ellipse 2px 3px at 75% 70%, #5AA9E6, transparent),
-        radial-gradient(circle at 85% 95%, #C44545 2px, transparent),
-        radial-gradient(circle at 95% 40%, #7FFFD4 1px, transparent),
-        radial-gradient(ellipse 3px 2px at 5% 65%, #8C6FF7, transparent),
-        radial-gradient(circle at 10% 80%, #E6C36A 1px, transparent),
-        radial-gradient(ellipse 2px 3px at 20% 15%, #5AA9E6, transparent),
-        radial-gradient(ellipse 3px 2px at 30% 50%, #C44545, transparent),
-        radial-gradient(circle at 40% 90%, #7FFFD4 2px, transparent),
-        radial-gradient(ellipse 3px 2px at 50% 25%, #8C6FF7, transparent),
-        radial-gradient(circle at 60% 75%, #E6C36A 1px, transparent),
-        radial-gradient(circle at 70% 35%, #5AA9E6 2px, transparent),
-        radial-gradient(ellipse 2px 3px at 80% 60%, #C44545, transparent),
-        radial-gradient(ellipse 3px 2px at 90% 80%, #7FFFD4, transparent),
-        radial-gradient(circle at 2% 30%, #8C6FF7 1px, transparent);
-      background-repeat: repeat;
-      background-size: 600px 600px;
-      animation: move-bg-fast 25s linear infinite;
+    
+    /* Styles for the new Confetti Component */
+    .confetti-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0; /* Above stars, below content */
+        overflow: hidden;
+    }
+    .confetti-piece {
+        position: absolute;
+        width: 10px;
+        height: 20px;
+        top: -20px;
+        opacity: 0;
+        animation: fall 5s linear infinite;
+    }
+    @keyframes fall {
+        0% {
+            transform: translateY(0vh) rotateZ(0deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(105vh) rotateZ(720deg);
+            opacity: 0;
+        }
     }
   </style>
 <script type="importmap">

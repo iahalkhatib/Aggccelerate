@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
             >
               <MenuIcon className="w-6 h-6" />
             </button>
-            <span className="font-inter text-sm font-bold tracking-wider text-gray-300 hidden sm:block">AGGCCELERATE</span>
+            <span className="font-inter text-sm font-bold tracking-wider text-brand-conductor hidden sm:block">AGGCCELERATE</span>
           </div>
 
           {/* Dropdown Menu */}
@@ -69,7 +69,6 @@ export const Header: React.FC = () => {
           style={{ textShadow: '0 0 5px rgba(255,255,255,0.4), 0 0 15px rgba(140, 111, 247, 0.4)' }}
         >
           ORCHESTRA
-          <TrebleClefIcon className="w-12 h-12 ml-1 text-brand-conductor opacity-80" />
         </h1>
         <p className="text-gray-300 mt-2 text-sm sm:text-base">
           Orchestrate Intelligence — Your AI, Conducted to Perfection.

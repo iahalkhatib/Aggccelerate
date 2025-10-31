@@ -9,6 +9,7 @@ import { ScoreDrawer } from './components/ScoreDrawer';
 import { generateGeminiResponse } from './services/geminiService';
 import { ModuleCardData, SessionLogEntry } from './types';
 import { MODULE_DEFINITIONS } from './theme';
+import { Confetti } from './components/Confetti';
 
 const initialModules: ModuleCardData[] = Object.values(MODULE_DEFINITIONS)
   .filter(m => ['Brass', 'Strings', 'Percussion', 'Winds'].includes(m.name))
@@ -71,7 +72,8 @@ function App() {
 
   return (
     <div className="min-h-screen font-inter p-4 sm:p-6 lg:p-8 flex flex-col items-center">
-      <div className="w-full max-w-7xl">
+      <Confetti />
+      <div className="w-full max-w-7xl relative z-10">
         <Header />
         <main className="mt-8">
           <PromptInput onRunAll={handleRunAll} isLoading={isAnyLoading} />
